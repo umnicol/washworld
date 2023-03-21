@@ -16,8 +16,8 @@ const Locations = () => {
   
 
   return (
-    <Container maxWidth="sm">
-      <Typography variant="h4" component="h1" gutterBottom>
+    <Container maxWidth="sm" sx={{ marginTop: '5rem' }}>
+      <Typography sx={{ fontWeight: 'bold', fontSize:'30px' }}>
         Available Locations
       </Typography>
       <LocationList locations={locations} />
