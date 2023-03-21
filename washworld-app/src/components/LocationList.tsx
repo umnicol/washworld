@@ -7,12 +7,19 @@ type Props = {
 
 export default function LocationList({ locations }: Props) {
   return (
-    <List>
-      {Array.isArray(locations) && locations.map((location) => (
-        <ListItem key={location.id} button>
-          <ListItemText primary={location.name} />
-        </ListItem>
-      ))}
-    </List>
+<List>
+  {locations && locations.length > 0 ? (
+    locations.map((location) => (
+      <ListItem key={location.id} button>
+        <ListItemText primary={location.name} />
+      </ListItem>
+    ))
+  ) : (
+    <ListItem>
+      <ListItemText primary="No locations found" />
+    </ListItem>
+  )}
+</List>
+
   );
 }
