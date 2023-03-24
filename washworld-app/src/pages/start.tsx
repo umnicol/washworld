@@ -7,7 +7,7 @@ type CarWashTimerProps = {
 };
 
 const CarWashTimer = ({ ProductId, LocationId }: CarWashTimerProps) => {
-  const [seconds, setSeconds] = useState(900); // 15 minutes in seconds
+  const [seconds, setSeconds] = useState(900); // 15 minutes in sec
   const [timerId, setTimerId] = useState<NodeJS.Timeout | null>(null);
 
   const startTimer = () => {
@@ -33,11 +33,11 @@ const CarWashTimer = ({ ProductId, LocationId }: CarWashTimerProps) => {
     }
   };
 
-  const formattedTime = new Date(seconds * 1000).toISOString().substr(14, 5); // format minutes and seconds only
+  const formattedTime = new Date(seconds * 1000).toISOString().substr(14, 5); // formated minutes and seconds 
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-          <Typography variant="h6" sx={{ marginBottom: '1rem'}}>
+          <Typography variant="h5" sx={{ marginBottom: '1rem'}}>
             {`Your car wash program ${ProductId} at location ${LocationId}. Time: 15 min`}
           </Typography>
           <Typography variant="h4" sx={{ marginBottom: '2rem' }}>{formattedTime}</Typography>
