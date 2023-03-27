@@ -1,8 +1,9 @@
 import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { Products } from '../types';
 
+
 type Props = {
-  products: Products[] | undefined;
+  products: Products[];
 };
 
 export default function ProductsList({ products }: Props) {
@@ -11,7 +12,7 @@ export default function ProductsList({ products }: Props) {
       {products && products.length > 0 ? (
         products.map((product) => (
           <ListItem
-            key={product.id} // Modify key to use the product id
+            key={product.id}
             button
             sx={{
               border: '2px solid black',
@@ -36,7 +37,7 @@ export default function ProductsList({ products }: Props) {
                 }}
               />
             </ListItemIcon>
-            <ListItemText primary={product.name} /> {/* render product name */}
+            <ListItemText primary={product.name} />
           </ListItem>
         ))
       ) : (

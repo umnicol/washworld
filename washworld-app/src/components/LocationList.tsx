@@ -37,7 +37,7 @@ export default function LocationList({ locations }: Props) {
                 }}
               />
             </ListItemIcon>
-            
+
             <ListItemText
               primary={<span style={{ fontWeight: 'bold' }}>{location.name}</span>}
               secondary={location.status}
