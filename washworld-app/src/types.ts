@@ -10,6 +10,12 @@ export interface Location {
     description: string;
     price: number;
     program: number;
+    location: string;
   }
   
+  export interface Camera {
+    id: number;
+    status: string;
+    location: string;
+  }
   
