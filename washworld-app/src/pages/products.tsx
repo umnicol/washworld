@@ -16,9 +16,9 @@ const Products = () => {
   
 
   return (
-    <Container maxWidth="sm">
-      <Typography variant="h4" component="h1" gutterBottom>
-        Available Products for LPN
+    <Container maxWidth="sm" sx={{ marginTop: '5rem' }}>
+      <Typography sx={{ fontWeight: 'bold', fontSize:'30px' }}>
+        Available Products
       </Typography>
       <ProductsList products={products} />
     </Container>
